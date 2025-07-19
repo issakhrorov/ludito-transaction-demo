@@ -1,0 +1,72 @@
+###
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastname": "Doe",
+  "email": "john.doe@example.com",
+  "password": "StrongPassword123"
+}
+
+
+###
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "StrongPassword123"
+}
+
+
+###
+PUT {{baseUrl}}/users/me
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "firstname": "Not John"
+}
+
+
+###
+GET {{baseUrl}}/users/52
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+
+###
+GET {{baseUrl}}/users/all
+Authorization: Bearer {{token}}
+
+
+###
+POST {{baseUrl}}/transactions/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "description": "Transaction for testing",
+  "amount": 100.00,
+  "currency": "USD",
+  "item": "Test purchase"
+}
+
+
+###
+GET {{baseUrl}}/transactions/all?
+    user_id=102
+Authorization: Bearer {{token}}
+
+
+###
+GET {{baseUrl}}/transactions/all?
+    from=2025-07-01&
+    to=2025-07-31
+Authorization: Bearer {{token}}
+
+
+
+
+
