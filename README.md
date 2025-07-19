@@ -47,7 +47,7 @@ Connect to your PostgreSQL server (e.g., via `psql`), then create the database:
 CREATE DATABASE ludito_demo;
 ```
 
-### 3. Run Locally (Development)
+### 4. Run Locally (Development)
 
 With Intellij IDEA or any IDE:
 
