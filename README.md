@@ -19,8 +19,8 @@ A Spring Boot REST API for managing users and their financial transactions.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/transaction-service.git
-cd transaction-service
+git clone https://github.com/issakhrorov/lutido-transaction-demo.git
+cd lutido-transaction-demo
 ```
 
 ⸻
@@ -38,6 +38,10 @@ CREATE DATABASE lutido_demo;
 ```
 
 ### 3. Run Locally (Development)
+
+With Intellij IDEA or any IDE:
+
+- Change spring profile on Dockerfile to dev 
 
 With Gradle:
 
@@ -114,6 +118,8 @@ src
 │   │       └── DemoTransactionApplication.kt
 │   └── resources
 │       └── application.yml
+│       └── application-dev.yml
+│       └── application-demo.yml
 ```
 
 ⸻
