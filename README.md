@@ -19,13 +19,23 @@ A Spring Boot REST API for managing users and their financial transactions.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/issakhrorov/lutido-transaction-demo.git
-cd lutido-transaction-demo
+git clone https://github.com/issakhrorov/ludito-transaction-demo.git
+cd ludito-transaction-demo
 ```
 
 ⸻
 
-### 2. Create PostgreSQL Database
+### 📄 2. Create .env File
+
+```# .env
+SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/ludito_demo
+SPRING_DATASOURCE_USERNAME=your_username
+SPRING_DATASOURCE_PASSWORD=your_password
+```
+
+⸻
+
+### 3. Create PostgreSQL Database
 
 You can use your local PostgreSQL database or run PostgreSQL inside Docker.
 
@@ -34,7 +44,7 @@ You can use your local PostgreSQL database or run PostgreSQL inside Docker.
 Connect to your PostgreSQL server (e.g., via `psql`), then create the database:
 
 ```sql
-CREATE DATABASE lutido_demo;
+CREATE DATABASE ludito_demo;
 ```
 
 ### 3. Run Locally (Development)
@@ -52,8 +62,8 @@ With Gradle:
 With Docker:
 
 ```bash
-docker build -t lutido-demo-transaction-service .
-docker run -p 8080:8080 --env-file .env lutido-demo-transaction-service
+docker build -t ludito-demo-transaction-service .
+docker run -p 8080:8080 --env-file .env ludito-demo-transaction-service
 ```
 
 ⸻
