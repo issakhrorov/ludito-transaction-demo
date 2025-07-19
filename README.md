@@ -25,7 +25,7 @@ cd ludito-transaction-demo
 
 ⸻
 
-### 📄 2. Create .env File
+### 2. Create .env File
 
 ```# .env
 SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/ludito_demo
