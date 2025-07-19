@@ -127,7 +127,7 @@ src
 ## 🧑‍💻 Author
 
 **Ismoil Axrorov**  
-GitHub: github.com/your-username
+GitHub: github.com/issakhrorov
 Email: ismoilaxrorov6600@gmail.com
 
 ⸻
