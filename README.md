@@ -28,18 +28,15 @@ cd ludito-transaction-demo
 ### 2. Create .env File
 
 ```# .env
-SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/ludito_demo
+SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/ludito_demo
 SPRING_DATASOURCE_USERNAME=your_username
+SPRING_PROFILES_ACTIVE=demo
 SPRING_DATASOURCE_PASSWORD=your_password
 ```
 
 ⸻
 
-### 3. Create PostgreSQL Database
-
-You can use your local PostgreSQL database or run PostgreSQL inside Docker.
-
-#### If using local PostgreSQL:
+### 3. Create PostgreSQL Database (If using local PostgreSQL)
 
 Connect to your PostgreSQL server (e.g., via `psql`), then create the database:
 
