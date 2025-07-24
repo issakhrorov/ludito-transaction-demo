@@ -53,17 +53,17 @@ With Intellij IDEA or any IDE:
 
 - Change spring profile on Dockerfile to dev 
 
-With Gradle:
+With Maven:
 
 ```bash
-./gradlew bootRun
+mvn spring-boot:run
 ```
 
 With Docker:
 
 ```bash
-docker build -t ludito-demo-transaction-service .
-docker run -p 8080:8080 --env-file .env ludito-demo-transaction-service
+chmod +x wait-for-postgres.sh # Make sure the script is executable
+docker compose up --build
 ```
 
 ⸻
@@ -104,7 +104,7 @@ API Endpoints
 ```bash
 curl -X POST http://localhost:8080/demo_transaction/api/v1/auth/register \
   -H "Content-Type: application/json" \
-  -d '{"firstName": "John", "lastName": "Doe", "email": "john@example.com", "password": "password123"}'
+  -d '{"firstName": "John", "lastName": "Doe", "email": "john@example.com", "password": "12345"}'
 ```
 
 ⸻

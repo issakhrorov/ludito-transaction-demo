@@ -1,6 +1,7 @@
 package ludito.demo_transaction.config.jwt;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;
@@ -52,7 +53,7 @@ public class JwtTokenUtil {
     return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
   }
 
-  private boolean isTokenExpired(String token) {
+  public boolean isTokenExpired(String token) {
     final Date expiration = getExpirationDateFromToken(token);
     return expiration.before(new Date());
   }
